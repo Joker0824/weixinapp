@@ -1,0 +1,5 @@
+<!-- pages/welcome/welcome.wxml -->
+<view class="container">
+  <image src="/images/mm.jpg" class="user-avator" />
+  <text class="user-name">周杰伦</text>
+</view>

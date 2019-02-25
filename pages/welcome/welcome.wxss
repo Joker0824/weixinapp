@@ -1,0 +1,10 @@
+/* pages/welcome/welcome.wxss */
+.user-avator{
+ width: 750rpx;
+ height: 200rpx;
+ border-radius: 50%;
+}
+.user-name{
+  font-size: 30rpx;
+  line-height: 100rpx;
+}

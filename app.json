@@ -1,0 +1,9 @@
+{
+  "pages": ["pages/posts/post", "pages/welcome/welcome"],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fffff",
+    "navigationBarTitleText": "我的小程序",
+    "navigationBarTextStyle": "black"
+  }
+}

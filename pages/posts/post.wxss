@@ -1,0 +1,38 @@
+/* pages/posts/post.wxss */
+swiper{
+  height: 500rpx;
+}
+
+.new__list{
+  display: flex;
+  flex-direction: column;
+}
+.news__item{
+  border-top: 10px solid #ccc;
+}
+.news__header{
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+.news__date{
+ font-size: 30rpx;
+}
+.news__avator{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+.news__content{
+  margin: 0 20rpx 10px 20rpx;
+  line-height: 40rpx;
+}
+.news__more{
+  display: flex;
+  align-items: center;
+}
+.news__more image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
