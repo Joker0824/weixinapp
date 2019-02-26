@@ -1,5 +1,6 @@
 let newsList = [
   {
+    postId: "1",
     userAvatar: "/images/avator.png",
     imgSrc: "/images/newbg.jpg",
     newsText:
@@ -7,6 +8,7 @@ let newsList = [
     newsDate: "2019-02-25"
   },
   {
+    postId: "2",
     userAvatar: "/images/avator.png",
     imgSrc: "/images/newbg.jpg",
     newsText:
@@ -14,6 +16,7 @@ let newsList = [
     newsDate: "2019-02-25"
   },
   {
+    postId: "3",
     userAvatar: "/images/avator.png",
     imgSrc: "/images/newbg.jpg",
     newsText:
@@ -21,6 +24,7 @@ let newsList = [
     newsDate: "2019-02-25"
   },
   {
+    postId: "4",
     userAvatar: "/images/avator.png",
     imgSrc: "/images/newbg.jpg",
     newsText:

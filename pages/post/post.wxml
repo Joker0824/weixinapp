@@ -19,7 +19,10 @@
 		 wx:for-item="news"
 		 wx:key="news.newsDate"
 		>
-			<template is="post-item" data="{{...news}}" />
+			<view class="template--wrapper" bind:tap="onPostItemTap" data-postId="{{news.postId}}">
+			<!-- template会被替换,添加事件无效 -->
+				<template is="post-item" data="{{...news}}" />
+			</view>
 		</view>
 	</view>
 </view>

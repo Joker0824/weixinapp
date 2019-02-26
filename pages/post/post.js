@@ -63,5 +63,13 @@ Page({
    */
   onShareAppMessage: function() {
     console.log("onShareAppMessage")
+  },
+  /**
+   * postItem被点击
+   */
+  onPostItemTap: function(event) {
+    // 获取点击的是哪一个postitem
+    console.log(event.currentTarget.dataset.postid)
+    console.log("onPostItemTap")
   }
 })
