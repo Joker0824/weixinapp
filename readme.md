@@ -34,5 +34,6 @@
 - `import`
   > 导入模版
   ```html
-  <import src="post-item/post-item.wxml"></import>
+  <import src="post-item/post-item.wxml" />
   ```
+- 使用`@import` 语句可以导入外联样式表
