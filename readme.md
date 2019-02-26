@@ -2,7 +2,7 @@
 
 #### 1.分辨率
 
-- 设计图 `Iphone6` 的尺寸 `150X1334`
+- 设计图 `Iphone6` 的尺寸 `750X1334`
 - `rpx（responsive pixel）`: 可以根据屏幕宽度进行自适应。规定屏幕宽为 `750rpx`。如在 `iPhone6` 上，屏幕宽度为 `375px`，共有 `750` 个物理像素，则 `750rpx = 375px = 750` 物理像素(设计图)，`1rpx = 0.5px = 1 物理像素(设计图)`。
 
 #### 2.页面配置（`app.json`)
@@ -36,6 +36,13 @@
     }
   })
   ```
+  - 接收参数
+    > 可以在目标页面的 `onLoad` 钩子的参数中获取打开当前页面路径中的参数。
+    ```javascript
+     onLoad: function(options) {
+        console.log(options.postId)
+      }
+    ```
 - `redirectTo`
   > 跳转到新页面,不能返回,当前页面触发 `onUnload` 钩子
 

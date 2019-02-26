@@ -71,7 +71,7 @@ Page({
     // 获取点击的是哪一个postitem
     console.log(event.currentTarget.dataset.postId)
     wx.navigateTo({
-      url: "/pages/post/post-detail/post-detail",
+      url: "/pages/post/post-detail/post-detail?postId=1",
       success: result => {},
       fail: () => {},
       complete: () => {
