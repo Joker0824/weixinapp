@@ -2,19 +2,25 @@
 <!-- 导入模版文件 -->
 <import src="/pages/post/post-item/post-item.wxml" />
 <view>
-  <!-- 轮播图 -->
-  <swiper indicator-dots="true" interval="2000" autoplay="true">
-    <swiper-item>
-      <image src="/images/swiper_1.jpg" mode="widthFix" />
-    </swiper-item>
-    <swiper-item>
-      <image src="/images/swiper_2.jpg" mode="widthFix" />
-    </swiper-item>
-  </swiper>
-  <!-- 新闻列表 -->
-  <view class="news__list">
-    <view class="news__item" wx:for="{{newsList}}" wx:for-item="news" wx:key="news.newsDate">
-      <template is="post-item" data="{{news}}" />
-    </view>
-  </view>
+	<!-- 轮播图 -->
+	<swiper indicator-dots="true" interval="2000" autoplay="true">
+		<swiper-item>
+			<image src="/images/swiper_1.jpg" mode="widthFix" />
+		</swiper-item>
+		<swiper-item>
+			<image src="/images/swiper_2.jpg" mode="widthFix" />
+		</swiper-item>
+	</swiper>
+	<!-- 新闻列表 -->
+	<view class="news__list">
+		<view
+		 class="news__item"
+		 wx:for="{{newsList}}"
+		 wx:for-item="news"
+		 wx:key="news.newsDate"
+		>
+			<template is="post-item" data="{{...news}}" />
+		</view>
+	</view>
 </view>
+
