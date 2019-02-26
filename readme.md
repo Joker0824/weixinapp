@@ -25,7 +25,17 @@
 #### 5.路由跳转
 
 - `navigateTo`
-  > 跳转到子级页面,可以返回,当前页面触发 `onHide` 钩子
+  > 跳转到子级页面,可以返回,当前页面触发 `onHide` 钩子,使用绝对路径
+  ```javascript
+  wx.navigateTo({
+    url: "/pages/post/post-detail/post-detail",
+    success: result => {},
+    fail: () => {},
+    complete: () => {
+      console.log("complete")
+    }
+  })
+  ```
 - `redirectTo`
   > 跳转到新页面,不能返回,当前页面触发 `onUnload` 钩子
 

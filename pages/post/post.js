@@ -69,7 +69,14 @@ Page({
    */
   onPostItemTap: function(event) {
     // 获取点击的是哪一个postitem
-    console.log(event.currentTarget.dataset.postid)
-    console.log("onPostItemTap")
+    console.log(event.currentTarget.dataset.postId)
+    wx.navigateTo({
+      url: "/pages/post/post-detail/post-detail",
+      success: result => {},
+      fail: () => {},
+      complete: () => {
+        console.log("complete")
+      }
+    })
   }
 })
