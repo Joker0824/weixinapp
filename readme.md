@@ -17,11 +17,22 @@
 #### 4.事件
 
 - 绑定事件
-  > `bintouchstart`
+  - `bindtouchstart`
+  - `bind:touchstart`
+- 阻止冒泡
+  - `catch:tap`
 
 #### 5.路由跳转
 
-- navigateTo
-  > 跳转到子级页面,可以返回
-- redirectTo
-  > 跳转到新页面,不能返回
+- `navigateTo`
+  > 跳转到子级页面,可以返回,当前页面触发 `onHide` 钩子
+- `redirectTo`
+  > 跳转到新页面,不能返回,当前页面触发 `onUnload` 钩子
+
+#### 6.引用文件
+
+- `import`
+  > 导入模版
+  ```html
+  <import src="post-item/post-item.wxml"></import>
+  ```

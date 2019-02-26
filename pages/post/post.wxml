@@ -1,4 +1,6 @@
 <!-- pages/posts/post.wxml -->
+<!-- 导入模版文件 -->
+<import src="/pages/post/post-item/post-item.wxml" />
 <view>
   <!-- 轮播图 -->
   <swiper indicator-dots="true" interval="2000" autoplay="true">
@@ -12,20 +14,7 @@
   <!-- 新闻列表 -->
   <view class="news__list">
     <view class="news__item" wx:for="{{newsList}}" wx:for-item="news" wx:key="news.newsDate">
-      <view class="news__header">
-        <image src="{{news.userAvatar}}" class="news__avator"></image>
-        <text class="news__date">{{news.newsDate}}</text>
-      </view>
-      <image src="/images/newbg.jpg" />
-      <view class="news__content">
-        <text class="news__text">{{news.newsText}}</text>
-      </view>
-      <view class="news__more">
-        <image src="/images/collect.png" class="collect" />
-        <text>92</text>
-        <image src="/images/comment.png" class="comment" />
-        <text>65</text>
-      </view>
+      <template is="post-item" data="{{news}}" />
     </view>
   </view>
 </view>

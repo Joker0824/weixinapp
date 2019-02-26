@@ -1,5 +1,5 @@
 <!-- pages/welcome/welcome.wxml -->
 <view class="container">
   <image src="/images/mm.jpg" class="user-avator" />
-  <text class="user-name" bindtap="onTap">开启小程序</text>
+  <text class="user-name" bind:tap="onTap">开启小程序</text>
 </view>
