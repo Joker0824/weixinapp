@@ -54,3 +54,8 @@
   <import src="post-item/post-item.wxml" />
   ```
 - 使用`@import` 语句可以导入外联样式表
+
+#### 7.生命周期
+
+- `onload`
+  > 在 `onload` 钩子中,异步绑定数据使用 `this.setData({postData})`;不需要异步绑定使用 `this.data.postData=postData`

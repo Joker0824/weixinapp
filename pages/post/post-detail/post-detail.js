@@ -10,6 +10,11 @@ Page({
    */
   onLoad: function(options) {
     console.log(options.postId)
+    // 设置缓存,缓存不能超过10mb
+    wx.setStorageSync("key", "风暴英雄")
+    // 获取缓存
+    let key = wx.getStorageSync("key")
+    console.log(key)
   },
 
   /**
