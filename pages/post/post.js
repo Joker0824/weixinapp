@@ -69,9 +69,9 @@ Page({
    */
   onPostItemTap: function(event) {
     // 获取点击的是哪一个postitem
-    console.log(event.currentTarget.dataset.postId)
+    let postId = event.currentTarget.dataset.postId
     wx.navigateTo({
-      url: "/pages/post/post-detail/post-detail?postId=1",
+      url: "/pages/post/post-detail/post-detail?postId=" + postId,
       success: result => {},
       fail: () => {},
       complete: () => {

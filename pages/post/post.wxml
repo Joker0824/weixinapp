@@ -5,10 +5,13 @@
 	<!-- 轮播图 -->
 	<swiper indicator-dots="true" interval="2000" autoplay="true">
 		<swiper-item>
-			<image src="/images/swiper_1.jpg" mode="widthFix" />
+			<image id="7" src="/images/wx.png" data-postId="3" />
 		</swiper-item>
 		<swiper-item>
-			<image src="/images/swiper_2.jpg" mode="widthFix" />
+			<image src="/images/vr.png" data-postId="4" />
+		</swiper-item>
+		<swiper-item>
+			<image src="/images/iqiyi.png" data-postId="5" />
 		</swiper-item>
 	</swiper>
 	<!-- 新闻列表 -->
@@ -20,8 +23,8 @@
 		 wx:key="news.newsDate"
 		>
 			<view class="template--wrapper" bind:tap="onPostItemTap" data-post-id="{{news.postId}}">
-			<!-- template会被替换,添加事件无效 -->
-				<template is="post-item" data="{{...news}}" />
+				<!-- template会被替换,添加事件无效 -->
+				<template is="postItem" data="{{...news}}" />
 			</view>
 		</view>
 	</view>

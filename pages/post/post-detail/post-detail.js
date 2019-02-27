@@ -1,4 +1,5 @@
 // pages/post/post-detail/post-detail.js
+import postsData from "../../../data/post-data"
 Page({
   /**
    * 页面的初始数据
@@ -8,13 +9,11 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
-    console.log(options.postId)
-    // 设置缓存,缓存不能超过10mb
-    wx.setStorageSync("key", "风暴英雄")
-    // 获取缓存
-    let key = wx.getStorageSync("key")
-    console.log(key)
+  onLoad: function(option) {
+    var postId = option.postId
+    let postData = postsData[postId]
+    debugger
+    this.setData({ postData })
   },
 
   /**

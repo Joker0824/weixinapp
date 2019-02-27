@@ -1,10 +1,10 @@
 /* pages/posts/post.wxss */
 
 /* 引入post-item的css文件 */
-@import "./post-item/post-item.wxss";
 
+@import "./post-item/post-item.wxss";
 swiper {
-  height: 500rpx;
+  height: 460rpx;
 }
 
 .new__list {
@@ -12,6 +12,6 @@ swiper {
   flex-direction: column;
 }
 
-.news__item {
-  border-top: 10px solid #ccc;
+swiper image {
+  width: 100%;
 }

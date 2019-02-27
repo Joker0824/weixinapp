@@ -1,18 +1,18 @@
-<!-- 新闻item模版 -->
-<template name="post-item">
-	<view class="news__header">
-		<image src="{{userAvatar}}" class="news__avator" />
-		<text class="news__date">{{newsDate}}</text>
-	</view>
-	<image src="/images/newbg.jpg" />
-	<view class="news__content">
-		<text class="news__text">{{newsText}}</text>
-	</view>
-	<view class="news__more">
-		<image src="/images/collect.png" class="collect" />
-		<text>92</text>
-		<image src="/images/comment.png" class="comment" />
-		<text>65</text>
+<!-- post-item模版 -->
+<template name="postItem">
+	<view class="post-container">
+		<view class="post-author-date">
+			<image class="post-author" src="{{avatar}}" />
+			<text class="post-date">{{date}}</text>
+		</view>
+		<text class="post-title">{{title}}</text>
+		<image class="post-image" src="{{imgSrc}}" />
+		<text class="post-content">{{content}}</text>
+		<view class="post-like">
+			<image class="post-like-image" src="/images/icon/chat.png" />
+			<text class="post-like-font">{{collection}}</text>
+			<text class="post-like-font">{{reading}}</text>
+		</view>
 	</view>
 </template>
 
