@@ -4,9 +4,10 @@
     "pages/welcome/welcome",
     "pages/post/post-detail/post-detail"
   ],
+  "requiredBackgroundModes": ["audio"],
   "window": {
     "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#fffff",
+    "navigationBarBackgroundColor": "#405f80",
     "navigationBarTitleText": "我的小程序",
     "navigationBarTextStyle": "black"
   }

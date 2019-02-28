@@ -8,7 +8,9 @@ Page({
     // 文章是否被收藏
     collected: false,
     postId: Number,
-    postData: {}
+    postData: {},
+    // 是否正在播放音乐
+    isPlayingMusic: false
   },
 
   /**
@@ -96,9 +98,24 @@ Page({
       success(res) {
         console.log(res.tapIndex)
       },
-      fail(res) {
-        <console className=""></console>log(res.errMsg)
-      }
+      fail(res) {}
     })
+  },
+  /**
+   * 音乐播放
+   */
+  onMusicTap: function() {
+    var music = postsData[this.data.postId].music
+    var backAudioManager = wx.getBackgroundAudioManager()
+    if (!this.data.isPlayingMusic) {
+      backAudioManager.src = music.url
+      backAudioManager.title = music.title
+      backAudioManager.coverImgUrl = music.coverImg
+      this.setData({ isPlayingMusic: !this.data.isPlayingMusic })
+      backAudioManager.play()
+    } else {
+      this.setData({ isPlayingMusic: !this.data.isPlayingMusic })
+      backAudioManager.pause()
+    }
   }
 })

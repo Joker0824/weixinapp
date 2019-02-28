@@ -59,3 +59,14 @@
 
 - `onload`
   > 在 `onload` 钩子中,异步绑定数据使用 `this.setData({postData})`;不需要异步绑定使用 `this.data.postData=postData`
+
+##### 8.媒体
+
+- 背景音乐(`BackgroundAudio`)
+  ```javascript
+  wx.playBackgroundAudio({
+    dataUrl: "", //只支持流媒体
+    title: "",
+    coverImgUrl: "" //只支持流媒体
+  })
+  ```
