@@ -3,9 +3,17 @@
 <import src="/pages/post/post-item/post-item.wxml" />
 <view>
 	<!-- 轮播图 -->
-	<swiper indicator-dots="true" interval="2000" autoplay="true">
+	<swiper
+	 indicator-dots="true"
+	 interval="2000"
+	 autoplay="true"
+	>
 		<swiper-item>
-			<image id="7" src="/images/wx.png" data-postId="3" />
+			<image
+			 id="7"
+			 src="/images/wx.png"
+			 data-postId="3"
+			/>
 		</swiper-item>
 		<swiper-item>
 			<image src="/images/vr.png" data-postId="4" />
@@ -22,7 +30,11 @@
 		 wx:for-item="news"
 		 wx:key="news.newsDate"
 		>
-			<view class="template--wrapper" bind:tap="onPostItemTap" data-post-id="{{news.postId}}">
+			<view
+			 class="template--wrapper"
+			 bind:tap="onPostItemTap"
+			 data-post-id="{{news.postId}}"
+			>
 				<!-- template会被替换,添加事件无效 -->
 				<template is="postItem" data="{{...news}}" />
 			</view>
