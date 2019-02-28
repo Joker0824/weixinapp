@@ -10,13 +10,16 @@ Page({
     postId: Number,
     postData: {},
     // 是否正在播放音乐
-    isPlayingMusic: false
+    isPlayingMusic: false,
+    // 音乐播放对象
+    backAudioManager: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(option) {
+    var _this = this
     // 获取路由传递的参数
     this.data.postId = option.postId
     // 从本地数据库post-data查找postId对应的数据
@@ -26,6 +29,13 @@ Page({
     if (postsCollected && postsCollected[this.data.postId]) {
       this.setData({ collected: true })
     }
+    var backAudioManager = wx.getBackgroundAudioManager()
+    debugger
+    this.setData({ backAudioManager })
+    // 监听后台背景音乐暂停
+    backAudioManager.onPause(function() {
+      _this.setData({ isPlayingMusic: false })
+    })
   },
 
   /**
@@ -106,7 +116,7 @@ Page({
    */
   onMusicTap: function() {
     var music = postsData[this.data.postId].music
-    var backAudioManager = wx.getBackgroundAudioManager()
+    var backAudioManager = this.data.backAudioManager
     if (!this.data.isPlayingMusic) {
       backAudioManager.src = music.url
       backAudioManager.title = music.title
