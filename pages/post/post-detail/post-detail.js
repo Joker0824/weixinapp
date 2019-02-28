@@ -36,6 +36,10 @@ Page({
     backAudioManager.onPause(function() {
       _this.setData({ isPlayingMusic: false })
     })
+    // 监听后台背景音乐播放
+    backAudioManager.onPlay(function() {
+      _this.setData({ isPlayingMusic: true })
+    })
   },
 
   /**
