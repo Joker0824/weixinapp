@@ -64,9 +64,6 @@
 
 - 背景音乐(`BackgroundAudio`)
   ```javascript
-  wx.playBackgroundAudio({
-    dataUrl: "", //只支持流媒体
-    title: "",
-    coverImgUrl: "" //只支持流媒体
-  })
+  var backAudioManager = wx.getBackgroundAudioManager()
+  backAudioManager.play()
   ```
