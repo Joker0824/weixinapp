@@ -60,7 +60,9 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function() {},
-  // 用户点击收藏
+  /**
+   * 用户点击收藏
+   */
   onColletionTap: function() {
     this.setData({ collected: !this.data.collected })
     var postsCollected =
@@ -69,6 +71,10 @@ Page({
         : {}
     postsCollected[this.data.postId] = this.data.collected
     wx.setStorageSync("postsCollected", postsCollected)
+    this.showToast()
+  },
+  showToast: function() {
+    var _this = this
     wx.showToast({
       title: this.data.collected ? "收藏成功" : "已取消收藏",
       icon: "success",
@@ -78,6 +84,21 @@ Page({
       success: result => {},
       fail: () => {},
       complete: () => {}
+    })
+  },
+  /**
+   * 用户点击分享
+   */
+  onShareTap: function() {
+    console.log("share")
+    wx.showActionSheet({
+      itemList: ["A", "B", "C"],
+      success(res) {
+        console.log(res.tapIndex)
+      },
+      fail(res) {
+        <console className=""></console>log(res.errMsg)
+      }
     })
   }
 })
