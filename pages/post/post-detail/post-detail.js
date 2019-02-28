@@ -4,16 +4,26 @@ Page({
   /**
    * 页面的初始数据
    */
-  data: {},
+  data: {
+    // 文章是否被收藏
+    collected: false,
+    postId: Number,
+    postData: {}
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(option) {
-    var postId = option.postId
-    let postData = postsData[postId]
-    debugger
+    // 获取路由传递的参数
+    this.data.postId = option.postId
+    // 从本地数据库post-data查找postId对应的数据
+    let postData = postsData[this.data.postId]
     this.setData({ postData })
+    var postsCollected = wx.getStorageSync("postsCollected")
+    if (postsCollected && postsCollected[this.data.postId]) {
+      this.setData({ collected: true })
+    }
   },
 
   /**
@@ -49,5 +59,25 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {}
+  onShareAppMessage: function() {},
+  // 用户点击收藏
+  onColletionTap: function() {
+    this.setData({ collected: !this.data.collected })
+    var postsCollected =
+      wx.getStorageSync("postsCollected") !== ""
+        ? wx.getStorageSync("postsCollected")
+        : {}
+    postsCollected[this.data.postId] = this.data.collected
+    wx.setStorageSync("postsCollected", postsCollected)
+    wx.showToast({
+      title: this.data.collected ? "收藏成功" : "已取消收藏",
+      icon: "success",
+      image: "",
+      duration: 1000,
+      mask: false,
+      success: result => {},
+      fail: () => {},
+      complete: () => {}
+    })
+  }
 })
