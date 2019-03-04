@@ -77,3 +77,10 @@ var app = getApp()
 // app全局属性
 var globalData = app.globalData
 ```
+
+##### 10.target 和 currentTarget
+
+- target
+  > 当前点击的 dom
+- currentTarget
+  > 绑定点击事件的 dom

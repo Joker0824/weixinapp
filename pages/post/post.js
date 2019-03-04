@@ -80,5 +80,21 @@ Page({
         console.log("complete")
       }
     })
+  },
+  /**
+   * SwiperItem被点击
+   */
+  onSwiperItemTap: function(event) {
+    // 获取点击的是哪一个swiperitem,target指被点击的对象
+    let postId = event.target.dataset.postId
+    debugger
+    wx.navigateTo({
+      url: "/pages/post/post-detail/post-detail?postId=" + postId,
+      success: result => {},
+      fail: () => {},
+      complete: () => {
+        console.log("complete")
+      }
+    })
   }
 })

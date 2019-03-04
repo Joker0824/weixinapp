@@ -7,19 +7,20 @@
 	 indicator-dots="true"
 	 interval="2000"
 	 autoplay="true"
+	 catch:tap="onSwiperItemTap"
 	>
 		<swiper-item>
 			<image
 			 id="7"
 			 src="/images/wx.png"
-			 data-postId="3"
+			 data-post-id="3"
 			/>
 		</swiper-item>
 		<swiper-item>
-			<image src="/images/vr.png" data-postId="4" />
+			<image src="/images/vr.png" data-post-id="4" />
 		</swiper-item>
 		<swiper-item>
-			<image src="/images/iqiyi.png" data-postId="5" />
+			<image src="/images/iqiyi.png" data-post-id="5" />
 		</swiper-item>
 	</swiper>
 	<!-- 新闻列表 -->
