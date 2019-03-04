@@ -67,3 +67,13 @@
   var backAudioManager = wx.getBackgroundAudioManager()
   backAudioManager.play()
   ```
+
+##### 9.app 实例
+
+- 获取 app 实例
+
+```javascript
+var app = getApp()
+// app全局属性
+var globalData = app.globalData
+```
