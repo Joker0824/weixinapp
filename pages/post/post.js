@@ -14,6 +14,8 @@ Page({
   onLoad: function(options) {
     console.log(newsList)
     this.setData({ newsList })
+    var appInst = getApp()
+    console.log(appInst.globalData.isPlayingMusic)
   },
 
   /**

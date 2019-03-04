@@ -1,10 +1,11 @@
 //app.js
 App({
-  onLaunch: function () {
+  onLaunch: function() {
+    console.log("App onLaunch")
     // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
+    var logs = wx.getStorageSync("logs") || []
     logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+    wx.setStorageSync("logs", logs)
 
     // 登录
     wx.login({
@@ -15,7 +16,7 @@ App({
     // 获取用户信息
     wx.getSetting({
       success: res => {
-        if (res.authSetting['scope.userInfo']) {
+        if (res.authSetting["scope.userInfo"]) {
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
           wx.getUserInfo({
             success: res => {
@@ -33,7 +34,22 @@ App({
       }
     })
   },
+
+  onShow: function() {
+    console.log("App onShow")
+  },
+
+  onHide: function() {
+    console.log("App onHide")
+  },
+  onError: function() {
+    console.log("App onError")
+  },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    // 全局属性，控制音乐是否播放
+    app_isPlayingMusic: false,
+    //当前播放音乐的postid
+    app_currentMusicPostId: -1
   }
 })

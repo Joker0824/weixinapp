@@ -1,5 +1,7 @@
 // pages/post/post-detail/post-detail.js
 import postsData from "../../../data/post-data"
+var app = getApp()
+
 Page({
   /**
    * 页面的初始数据
@@ -20,26 +22,27 @@ Page({
    */
   onLoad: function(option) {
     var _this = this
+    // 获取背景音乐管理对象
+    var backAudioManager = wx.getBackgroundAudioManager()
     // 获取路由传递的参数
     this.data.postId = option.postId
     // 从本地数据库post-data查找postId对应的数据
     let postData = postsData[this.data.postId]
+    // 设置post-detail数据
     this.setData({ postData })
     var postsCollected = wx.getStorageSync("postsCollected")
+    // 获取收藏的postid对象
     if (postsCollected && postsCollected[this.data.postId]) {
       this.setData({ collected: true })
     }
-    var backAudioManager = wx.getBackgroundAudioManager()
-    debugger
     this.setData({ backAudioManager })
-    // 监听后台背景音乐暂停
-    backAudioManager.onPause(function() {
-      _this.setData({ isPlayingMusic: false })
-    })
-    // 监听后台背景音乐播放
-    backAudioManager.onPlay(function() {
-      _this.setData({ isPlayingMusic: true })
-    })
+    if (
+      app.globalData.app_isPlayingMusic &&
+      app.globalData.app_currentMusicPostId === this.data.postId
+    ) {
+      this.setData({ isPlayingMusic: true })
+    }
+    this.setBackAudioLister(backAudioManager, this)
   },
 
   /**
@@ -120,6 +123,7 @@ Page({
    */
   onMusicTap: function() {
     var music = postsData[this.data.postId].music
+    // 全局变量保存音乐信息
     var backAudioManager = this.data.backAudioManager
     if (!this.data.isPlayingMusic) {
       backAudioManager.src = music.url
@@ -131,5 +135,22 @@ Page({
       this.setData({ isPlayingMusic: !this.data.isPlayingMusic })
       backAudioManager.pause()
     }
+  },
+  /**
+   * 监听后台音乐播放
+   */
+  setBackAudioLister: function(backAudioManager, _this) {
+    // 监听后台背景音乐暂停
+    backAudioManager.onPause(function() {
+      _this.setData({ isPlayingMusic: false })
+      app.globalData.app_isPlayingMusic = false
+      app.globalData.app_currentMusicPostId = null
+    })
+    // 监听后台背景音乐播放
+    backAudioManager.onPlay(function() {
+      _this.setData({ isPlayingMusic: true })
+      app.globalData.app_isPlayingMusic = true
+      app.globalData.app_currentMusicPostId = _this.data.postId
+    })
   }
 })
