@@ -2,14 +2,19 @@
 
 /* 引入post-item的css文件 */
 
-@import "./post-item/post-item.wxss";
+@import "/pages/templates/post-item/post-item.wxss";
 swiper {
   height: 460rpx;
 }
 
 .new__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 swiper image {

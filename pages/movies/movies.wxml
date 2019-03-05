@@ -1,2 +1,5 @@
-<view>电影页面</view>
+<import src="/pages/templates/movie-item/movie-item.wxml" />
+<view class="movies">
+	<template is="movie-item" />
+</view>
 

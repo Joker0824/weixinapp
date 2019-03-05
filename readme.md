@@ -85,9 +85,13 @@ var globalData = app.globalData
 - `currentTarget`
   > 绑定点击事件的 `dom`
 
-##### 11. tabBar
+##### 11. `tabBar`
 
 > 如果小程序是一个多 `tab` 应用（客户端窗口的底部或顶部有 `tab` 栏可以切换页面），可以通过 `tabBar` 配置项指定 `tab` 栏的表现，以及 `tab` 切换时显示的对应页面。
 
 - 遇到问题：关于 `wx.redirectTo、wx.navigateTo` 失效问题
   > 如果在 `app.json` 页面中配置了 `tabBar`,并且要跳转的目标页面也在 `tabBar` 的设置当中时，那么在响应页面中设置的 `url` 会存在问题（常用的几种页面跳转方式便失效了），就是说不能跳转到 `tabBar` 中定义的页面。
+
+##### 12. `template`
+
+- `temaplte` 不是页面，不要在 `pages` 数组里面配置

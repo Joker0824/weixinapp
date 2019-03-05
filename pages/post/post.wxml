@@ -1,6 +1,6 @@
 <!-- pages/posts/post.wxml -->
 <!-- 导入模版文件 -->
-<import src="/pages/post/post-item/post-item.wxml" />
+<import src="/pages/templates/post-item/post-item.wxml" />
 <view>
 	<!-- 轮播图 -->
 	<swiper
