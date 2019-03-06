@@ -1,5 +1,5 @@
-<import src="/pages/templates/movie-item/movie-item.wxml" />
+<import src="/pages/movies/movie-block/movie-block.wxml" />
 <view class="movies">
-	<template is="movie-item" />
+	<template is="movie-block" />
 </view>
 

@@ -1,0 +1,10 @@
+@import '/pages/movies/star/star.wxss';
+.movie-item{
+
+}
+.movie-img{
+  
+}
+.moive-title{
+
+}

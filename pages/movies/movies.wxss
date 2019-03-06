@@ -1,1 +1,1 @@
-/* pages/movies/movies.wxss */
+@import '/pages/movies/movie-block/movie-block.wxss';

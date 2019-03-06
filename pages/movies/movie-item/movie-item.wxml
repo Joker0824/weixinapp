@@ -1,0 +1,9 @@
+<import src="/pages/movies/star/star.wxml" />
+<template name="movie-item">
+	<view class="movie-item">
+		<image class="movie-img" src="/images/houlai.jpg" />
+		<text class="movie-title">{{}}</text>
+		<template is="star" />
+	</view>
+</template>
+

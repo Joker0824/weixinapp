@@ -1,0 +1,9 @@
+.star-container{
+  display: flex;
+
+}
+.star-container image{
+  width: 17rpx;
+  height: 17rpx;
+  margin-left: 3px;
+}

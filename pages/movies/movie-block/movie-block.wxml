@@ -1,0 +1,19 @@
+<import src="/pages/movies/movie-item/movie-item.wxml" />
+<template name="movie-block">
+	<view class="movie-block">
+		<view class="block-header">
+			<view class="slogan" />
+			<view class="more">
+				<text class="more-text"/>
+
+				<image class="more-img" />
+			</view>
+		</view>
+		<view class="block-main">
+		  <template is="movie-item"></template>
+		  <template is="movie-item"></template>
+		  <template is="movie-item"></template>
+		</view>
+	</view>
+</template>
+

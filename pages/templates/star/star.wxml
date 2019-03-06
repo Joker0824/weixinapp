@@ -1,4 +1,0 @@
-<template name="star">
-	<view class="star" />
-</template>
-

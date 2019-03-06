@@ -1,0 +1,10 @@
+<template name="star">
+	<view class="star-container">
+		<image src="/images/icon/star.png" />
+		<image src="/images/icon/star.png" />
+		<image src="/images/icon/star.png" />
+		<image src="/images/icon/star.png" />
+		<image src="/images/icon/star.png" />
+	</view>
+</template>
+

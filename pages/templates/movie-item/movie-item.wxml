@@ -1,8 +1,0 @@
-<import src="/pages/templates/star/star.wxml" />
-<template name="movie-item">
-	<view class="movie-item">
-		<template is="star" />
-	</view>
-	<template is="star" />
-</template>
-
