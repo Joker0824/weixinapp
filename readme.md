@@ -95,3 +95,7 @@ var globalData = app.globalData
 ##### 12. `template`
 
 - `temaplte` 不是页面，不要在 `pages` 数组里面配置
+
+##### 13. 注意事项
+
+- text 前后不能有空格，否则会导致布局错乱

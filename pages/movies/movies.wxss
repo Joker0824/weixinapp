@@ -1,1 +1,5 @@
 @import '/pages/movies/movie-block/movie-block.wxss';
+.movies {
+  background-color: pink;
+  /* background-color: #f2f2f2; */
+}

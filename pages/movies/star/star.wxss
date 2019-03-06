@@ -1,9 +1,14 @@
-.star-container{
+.star-container {
   display: flex;
-
+  align-items: center;
 }
-.star-container image{
+
+.star-container image {
   width: 17rpx;
   height: 17rpx;
   margin-left: 3px;
+}
+
+.star-container .star-score {
+  margin-left: 10rpx;
 }

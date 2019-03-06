@@ -1,10 +1,15 @@
 @import '/pages/movies/star/star.wxss';
-.movie-item{
-
+.movie-item {
+  display: flex;
+  flex-direction: column;
 }
-.movie-img{
-  
-}
-.moive-title{
 
+.movie-img {
+  width: 200rpx;
+  height: 270rpx;
+  padding-bottom: 20rpx;
+}
+
+.movie-title {
+  margin-bottom: 16rpx;
 }

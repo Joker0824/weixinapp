@@ -2,7 +2,7 @@
 <template name="movie-item">
 	<view class="movie-item">
 		<image class="movie-img" src="/images/houlai.jpg" />
-		<text class="movie-title">{{}}</text>
+		<text class="movie-title">后来的我们</text>
 		<template is="star" />
 	</view>
 </template>

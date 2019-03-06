@@ -2,17 +2,16 @@
 <template name="movie-block">
 	<view class="movie-block">
 		<view class="block-header">
-			<view class="slogan" />
+			<text class="slogan">正在热映</text>
 			<view class="more">
-				<text class="more-text"/>
-
-				<image class="more-img" />
+				<text class="more-text">更多</text>
+				<image class="more-img" src="/images/icon/arrow-right.png" />
 			</view>
 		</view>
 		<view class="block-main">
-		  <template is="movie-item"></template>
-		  <template is="movie-item"></template>
-		  <template is="movie-item"></template>
+			<template is="movie-item" />
+			<template is="movie-item" />
+			<template is="movie-item" />
 		</view>
 	</view>
 </template>
